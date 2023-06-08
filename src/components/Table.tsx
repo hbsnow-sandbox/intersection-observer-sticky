@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
+import { CircularProgress } from "@mui/material";
 
 export function Table() {
   const [isShow, setShow] = useState(false);
@@ -32,7 +33,7 @@ export function Table() {
   if (!isShow) {
     return (
       <div className={styles.loading} ref={containerRef}>
-        Loading...
+        <CircularProgress />
       </div>
     );
   }
