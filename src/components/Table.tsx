@@ -1,8 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import styles from "./index.module.css";
-import { CircularProgress } from "@mui/material";
 
-export function Table() {
+type Props = {
+  loader: ReactNode;
+};
+
+export function Table({ loader }: Props) {
   const [isShow, setShow] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -11,7 +14,6 @@ export function Table() {
     const observer = new IntersectionObserver(
       ([entry], obs) => {
         if (entry.isIntersecting) {
-          console.log("is");
           setShow(true);
           if (containerRef.current) {
             obs.unobserve(containerRef.current);
@@ -33,7 +35,7 @@ export function Table() {
   if (!isShow) {
     return (
       <div className={styles.loading} ref={containerRef}>
-        <CircularProgress />
+        {loader}
       </div>
     );
   }
