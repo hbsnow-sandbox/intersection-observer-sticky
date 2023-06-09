@@ -5,6 +5,7 @@ import { Layout } from "./layout";
 import Example1 from "./pages/example-01";
 import Example2 from "./pages/example-02";
 import Example3 from "./pages/example-03";
+import "./main.css";
 
 const router = createHashRouter([
   {

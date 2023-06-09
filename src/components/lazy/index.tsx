@@ -24,8 +24,6 @@ export function Lazy({ loader, children }: Props) {
           if (containerRef.current) {
             obs.unobserve(containerRef.current);
           }
-        } else {
-          setShow(false);
         }
       },
       { root: null, rootMargin: "0px", threshold: 0.2 }
