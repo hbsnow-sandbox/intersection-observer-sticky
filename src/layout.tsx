@@ -22,6 +22,9 @@ export function Layout() {
           <li>
             <Link to="/example-04">CircularProgress + sticky</Link>
           </li>
+          <li>
+            <Link to="/example-05">CSS animation + sticky</Link>
+          </li>
         </ol>
       </nav>
       <Outlet />
