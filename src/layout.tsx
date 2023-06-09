@@ -15,6 +15,9 @@ export function Layout() {
               IntersectionObserver + LinearProgress + sticky
             </Link>
           </li>
+          <li>
+            <Link to="/example-03">CircularProgress + sticky</Link>
+          </li>
         </ol>
       </nav>
       <Outlet />

@@ -1,5 +1,6 @@
-import { CircularProgress, Table } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import { Lazy } from "../components/lazy";
+import { Table } from "../components/table";
 import styles from "./index.module.css";
 
 function Example1() {
