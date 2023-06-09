@@ -12,12 +12,15 @@ export function Layout() {
             </Link>
           </li>
           <li>
-            <Link to="/example-02">
+            <Link to="/example-02">IntersectionObserver + sticky</Link>
+          </li>
+          <li>
+            <Link to="/example-03">
               IntersectionObserver + LinearProgress + sticky
             </Link>
           </li>
           <li>
-            <Link to="/example-03">CircularProgress + sticky</Link>
+            <Link to="/example-04">CircularProgress + sticky</Link>
           </li>
         </ol>
       </nav>
