@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "./layout";
-import { Example1 } from "./pages/example-01";
-import { Example2 } from "./pages/example-02";
+import Example1 from "./pages/example-01";
+import Example2 from "./pages/example-02";
+import Example3 from "./pages/example-03";
 
 const router = createBrowserRouter(
   [
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
         { index: true, element: null },
         { path: "/example-01", element: <Example1 /> },
         { path: "/example-02", element: <Example2 /> },
+        { path: "/example-03", element: <Example3 /> },
       ],
     },
   ],

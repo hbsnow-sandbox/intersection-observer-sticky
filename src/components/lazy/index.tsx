@@ -1,11 +1,17 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import {
+  PropsWithChildren,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import styles from "./index.module.css";
 
-type Props = {
+type Props = PropsWithChildren<{
   loader: ReactNode;
-};
+}>;
 
-export function Table({ loader }: Props) {
+export function Lazy({ loader, children }: Props) {
   const [isShow, setShow] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -40,28 +46,5 @@ export function Table({ loader }: Props) {
     );
   }
 
-  return (
-    <div className={styles.container}>
-      <table>
-        <thead>
-          <tr>
-            <th className={styles.th} scope="col">
-              列1
-            </th>
-            <th className={styles.th} scope="col">
-              列2
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {[...Array(50)].map((_, i) => (
-            <tr key={i}>
-              <td className="td">{i}</td>
-              <td className="td">{i}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
+  return children;
 }

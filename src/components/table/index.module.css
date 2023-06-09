@@ -1,7 +1,3 @@
-.loading {
-  height: 300px;
-}
-
 .container {
   max-height: 300px;
   overflow-x: auto;

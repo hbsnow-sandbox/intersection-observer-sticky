@@ -1,15 +1,19 @@
-import { CircularProgress } from "@mui/material";
-import { Table } from "../components/Table";
+import { CircularProgress, Table } from "@mui/material";
+import { Lazy } from "../components/lazy";
 import styles from "./index.module.css";
 
-export function Example1() {
+function Example1() {
   return (
     <>
       {[...Array(10)].map((_, i) => (
         <div key={i} className={styles.container}>
-          <Table loader={<CircularProgress />} />
+          <Lazy loader={<CircularProgress />}>
+            <Table />
+          </Lazy>
         </div>
       ))}
     </>
   );
 }
+
+export default Example1;
